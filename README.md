@@ -1,5 +1,11 @@
 # Getting Started 
 
+
+
+https://user-images.githubusercontent.com/24737239/207141656-89a27087-be55-4657-9e45-a9bd4950936a.mp4
+
+
+
 ## Server
 To start navigate to /backend and run `npm install`
 When `npm install` has completed, you can run the server with `npm start`
