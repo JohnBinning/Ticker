@@ -16,7 +16,6 @@ const finnhubClient = new finnhub.DefaultApi()
 
 
 app.get("/api/quote/:symbol", (req, res) => {
-  console.log("params", req.params.symbol)
   finnhubClient.quote(req.params.symbol, (error, data, response) => {
     res.json(data)
   });
