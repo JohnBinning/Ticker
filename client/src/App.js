@@ -10,21 +10,20 @@ function App() {
   const handlePriceCheck = useCallback(() => {
     fetch(`/api/quote/${symbol}`)
       .then((res) => {
-        console.log('res1', res)
-        return res.json()
+        return res.json();
       })
       .then(({ 
         c: currentPrice, 
         dp: percentChange, 
       }) => {
-        setPrice(currentPrice)
+        setPrice(currentPrice);
         // round to two digits and set percent
         if (percentChange === 0) {
           setSymbolIsUp(null);
         } else (
-          setSymbolIsUp(percentChange > 0 ? 'up' : 'down')
+          setSymbolIsUp(percentChange > 0 ? 'up' : 'down');
         )
-        setPercent(`${Math.round(percentChange * 100) / 100}%`)
+        setPercent(`${Math.round(percentChange * 100) / 100}%`);
       })
       .catch((err) => console.log('something went wrong: ', err));
   })
