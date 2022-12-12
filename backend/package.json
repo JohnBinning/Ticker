@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "finnhub": "^1.2.16"
+  },
+  "scripts": {
+    "start": "node server/index.js"
+  }
+}

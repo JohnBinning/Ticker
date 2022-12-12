@@ -1,0 +1,65 @@
+.Ticker {
+  color: #1A2027;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  &_input-container {
+    display: flex;
+    align-items: flex-end;
+
+    .button--price-check {
+      cursor: pointer;
+      background-color: #1976D2;
+      font-size: .875rem;
+      font-weight: 500;
+      line-height: 1.75;
+      height: 48px;
+      padding: 4px 16px;
+      border-radius: 4px;
+      border: 0;
+      color: #FFFFFF;
+      text-transform: uppercase;
+
+      &:disabled {
+        box-shadow: none;
+        color: rbga(0, 0, 0, .25);
+        background-color: rgba(0, 0, 0, .12);
+      }
+    }
+  }
+  &_label-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 8px;
+    
+    .symbol-input {
+      height: 16px;
+      border: 1px solid #6F7E8C;
+      padding: 16px 12px;
+      margin-top: 4px;
+      border-radius: 4px;
+    }
+    label {
+      color: rgba(0, 0, 0, .6);
+    }
+  }
+
+  &_data-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+
+    .price-info {
+      margin-bottom: 12px;
+    }
+
+    .percent-info {
+      &--up {
+        color: green;
+      }
+      &--down {
+        color: red;
+      }
+    }
+  }
+}
